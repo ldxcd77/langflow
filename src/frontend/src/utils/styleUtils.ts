@@ -142,6 +142,7 @@ import {
   Snowflake,
   Sparkles,
   Square,
+  SquareCheckBig,
   SquarePen,
   StickyNote,
   Store,
@@ -631,4 +632,5 @@ export const nodeIconsLucide: iconsType = {
   Option: OptionIcon,
   Perplexity,
   DuckDuckGo: DuckDuckGoIcon,
+  SquareCheckBig,
 };
