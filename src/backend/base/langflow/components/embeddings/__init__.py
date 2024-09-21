@@ -8,6 +8,7 @@ from .OllamaEmbeddings import OllamaEmbeddingsComponent
 from .OpenAIEmbeddings import OpenAIEmbeddingsComponent
 from .VertexAIEmbeddings import VertexAIEmbeddingsComponent
 from .GoogleGenerativeAIEmbeddings import GoogleGenerativeAIEmbeddingsComponent
+from .CloudflareWorkersAIEmbeddings import CloudflareWorkersAIEmbeddingsComponent
 
 __all__ = [
     "AIMLEmbeddingsComponent",
@@ -20,4 +21,5 @@ __all__ = [
     "OpenAIEmbeddingsComponent",
     "VertexAIEmbeddingsComponent",
     "GoogleGenerativeAIEmbeddingsComponent",
+    "CloudflareWorkersAIEmbeddingsComponent",
 ]
