@@ -117,7 +117,7 @@ class LCToolsAgentComponent(LCAgentComponent):
         HandleInput(
             name="tools",
             display_name="Tools",
-            input_types=["Tool", "BaseTool"],
+            input_types=["Tool", "BaseTool", "StructuredTool"],
             is_list=True,
         ),
     ]
