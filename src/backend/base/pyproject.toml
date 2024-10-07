@@ -41,6 +41,7 @@ flake8-type-checking.runtime-evaluated-base-classes = [
 ]
 select = [
     "A",
+    "AIR",
     "ASYNC",
     "B",
     "C4",
@@ -49,8 +50,10 @@ select = [
     "DTZ",
     "E",
     "EM",
+    "EXE",
     "F",
     "FA",
+    "FAST",
     "FLY",
     "FURB",
     "G",
@@ -208,7 +211,7 @@ dev = [
     "types-redis>=4.6.0.5",
     "ipykernel>=6.29.0",
     "mypy>=1.11.0",
-    "ruff>=0.4.5",
+    "ruff>=0.6.2",
     "httpx>=0.27",
     "pytest>=8.2.0",
     "types-requests>=2.32.0",

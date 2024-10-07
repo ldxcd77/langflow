@@ -1,7 +1,7 @@
 import asyncio
 import json
 from http import HTTPStatus
-from typing import Any
+from typing import Annotated, Any
 
 from fastapi import APIRouter, HTTPException, Query, Request
 from fastapi.responses import JSONResponse, StreamingResponse
@@ -38,7 +38,7 @@ async def event_generator(request: Request):
                         last_read_item = item
         if to_write:
             for ts, msg in to_write:
-                yield f"{json.dumps({ts:msg})}\n\n"
+                yield f"{json.dumps({ts: msg})}\n\n"
         else:
             current_not_sent += 1
             if current_not_sent == 5:
@@ -69,9 +69,9 @@ async def stream_logs(
 
 @log_router.get("/logs")
 async def logs(
-    lines_before: int = Query(0, description="The number of logs before the timestamp or the last log"),
-    lines_after: int = Query(0, description="The number of logs after the timestamp"),
-    timestamp: int = Query(0, description="The timestamp to start getting logs from"),
+    lines_before: Annotated[int, Query(0, description="The number of logs before the timestamp or the last log")],
+    lines_after: Annotated[int, Query(0, description="The number of logs after the timestamp")],
+    timestamp: Annotated[int, Query(0, description="The timestamp to start getting logs from")],
 ):
     global log_buffer
     if log_buffer.enabled() is False:
