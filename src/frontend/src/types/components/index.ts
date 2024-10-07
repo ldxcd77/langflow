@@ -432,6 +432,7 @@ export type PaginatorComponentType = {
   totalRowsCount: number;
   paginate: (pageIndex: number, pageSize: number) => void;
   storeComponent?: boolean;
+  pages?: number;
 };
 
 export type ConfirmationModalType = {
