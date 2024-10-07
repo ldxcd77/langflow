@@ -8,10 +8,10 @@ from .run import AssistantsRun
 
 __all__ = [
     "AssistantsCreateAssistant",
+    "AssistantsCreateThread",
     "AssistantsGetAssistantName",
     "AssistantsListAssistants",
-    "AssistantsCreateThread",
     "AssistantsRun",
-    "GetEnvVar",
     "Dotenv",
+    "GetEnvVar",
 ]
